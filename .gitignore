@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Environment and IDE-specific files
+.env
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Package management files
+*.egg
+*.egg-info/
+dist/
+build/
+*.wheel
+
+# Python virtual environment
+venv/
+env/
+
+# Dependencies
+pip-wheel-metadata/
+*.lock
+
+# Test coverage and pytest cache
+htmlcov/
+.cache/
+.pytest_cache/
+
+# Project-specific
+slides/__pycache__/
+code-examples/__pycache__/
