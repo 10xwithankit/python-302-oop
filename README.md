@@ -18,7 +18,7 @@ This course bridges the gap between Python programming, OOP concepts, and practi
 ## **Repository Structure**
 ```plaintext
 python-302-data-analysis-oop/
-├── code/                 # Python scripts for OOP concepts with AI/ML integration
+├── /                 # Python scripts for OOP concepts
 ├── exercises/            # Hands-on problems for data science and AI workflows
 ├── project/              # Final course project: AI pipeline with OOP
 ├── slides/               # Course presentation slides
