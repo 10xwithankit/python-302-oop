@@ -1,20 +1,13 @@
-class SuperHero:
-    team = "Justice League"  # Class variable
+# Define a class SuperHero:
+#   - create instance variables - name, power_level
+#   - create method(s):
+#       - attack: prints "{name} attacks with power level {power_level}!"
 
-    def __init__(self, name, power_level):
-        self.name = name
-        self.power_level = power_level
-    
-    def attack(self):
-        print(f"{self.name} attacks with power level {self.power_level}!")
 
-# Creating hero objects
-ww = SuperHero("Wonder Woman", 100)
-bm = SuperHero("Batman", 90)
+# Instantiate 2 hero objects
 
-# Using hero abilities
-ww.attack()
-bm.attack()
 
-# Printing class variable
-print(SuperHero.team)
+# Print hero names and their power_level (for each objects)
+
+
+# Call attack method for each obejct
