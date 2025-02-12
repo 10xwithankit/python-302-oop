@@ -6,6 +6,7 @@ __pycache__/
 
 # Environment and IDE-specific files
 .env
+env_oop/
 .vscode/
 .idea/
 *.swp
