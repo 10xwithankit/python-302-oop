@@ -13,6 +13,7 @@ class Person:
 
     # Define a getter method `get_age`
     # This method provides controlled access to the private attribute `__age`
+    @property
     def get_age(self):
         return self.__age  
 
