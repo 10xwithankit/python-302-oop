@@ -11,14 +11,13 @@ class Person:
         # Private attribute: Cannot be accessed directly outside the class
         self.__age = age  
 
-    # Define a getter method `get_age`
-    # This method provides controlled access to the private attribute `__age`
+    # Define a getter method using @property
     @property
-    def get_age(self):
+    def age(self):  # No "get_" needed
         return self.__age  
 
 # Create an instance of the `Person` class
 person = Person("Alice", 25)
 
-# Accessing the private attribute using the getter method
-print(person.get_age())  # Output: 25
+# Accessing the private attribute using the getter
+print(person.age)  # ✅ Output: 25 (No parentheses needed!)
