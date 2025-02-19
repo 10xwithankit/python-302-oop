@@ -9,12 +9,12 @@
 # Define a subclass `CSVSource` that inherits from `DataSource`
 
 # Implement the `read_data` method
-# This method returns a message for reading data from a CSV file
+# This method prints a message indicating data is being read from a CSV file
 
 # Define another subclass `SQLSource` that inherits from `DataSource`
 
 # Implement the `read_data` method
-# This method returns a message for reading data from an SQL database
+# This method prints a message indicating data is being read from an SQL database
 
 # Create instances of `CSVSource` and `SQLSource`
 
