@@ -1,34 +1,48 @@
 # Import the ABC module to define an abstract class
-# Define an abstract class `Payment`
-# Define an abstract method `process_payment`
 from abc import ABC, abstractmethod
 
-class Payment(ABC):  # Abstract Class
+# Define an abstract class `Payment`
+# Abstract classes cannot be instantiated and must be inherited by subclasses
+class Payment(ABC):
+    
+    # Define an abstract method `process_payment`
+    # This method must be implemented by any subclass
     @abstractmethod
     def process_payment(self, amount):
-        pass  # No implementation here
-
+        pass
 
 # Define a subclass `CreditCardPayment` that inherits from `Payment`
 class CreditCardPayment(Payment):
     
     # Implement the `process_payment` method
-    # This method returns a message for processing a credit card payment
+    # This method prints a message for processing a credit card payment
     def process_payment(self, amount):
-        return f"Processing credit card payment of ${amount}"
+        print(f"Processing credit card payment of ${amount}")  # Output will now be printed
 
 # Define another subclass `PayPalPayment` that inherits from `Payment`
 class PayPalPayment(Payment):
     
     # Implement the `process_payment` method
-    # This method returns a message for processing a PayPal payment
+    # This method prints a message for processing a PayPal payment
     def process_payment(self, amount):
-        return f"Processing PayPal payment of ${amount}"
+        print(f"Processing PayPal payment of ${amount}")  # Output will now be printed
 
-# Create instances of `CreditCardPayment` and `PayPalPayment`
+# Define another subclass `BankTransferPayment` that inherits from `Payment`
+class BankTransferPayment(Payment):
+    
+    # Implement the `process_payment` method
+    # This method prints a message for processing a bank transfer payment
+    def process_payment(self, amount):
+        print(f"Processing bank transfer payment of ${amount}")  # Output will now be printed
+
+# Create an instance of `CreditCardPayment` and process a payment
 cc_payment = CreditCardPayment()
-paypal_payment = PayPalPayment()
+cc_payment.process_payment(100)  # Output: Processing credit card payment of $100
 
-# Call the `process_payment` method for `CreditCardPayment` and `PayPalPayment`
-output1 = cc_payment.process_payment(100)  # Should return a valid output
-output2 = paypal_payment.process_payment(50)  # Should return a valid output
+# Create an instance of `PayPalPayment` and process a payment
+paypal_payment = PayPalPayment()
+paypal_payment.process_payment(50)  # Output: Processing PayPal payment of $50
+
+# Create an instance of `BankTransferPayment` and process a payment
+bank_payment = BankTransferPayment()
+bank_payment.process_payment(200)  # Output: Processing bank transfer payment of $200
