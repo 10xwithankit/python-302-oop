@@ -4,12 +4,17 @@ import datetime
 from typing import Annotated
 
 # Define a function `stamp2date`
-# This function converts a timestamp into a datetime object
+# This function converts a Unix timestamp into a datetime object
 def stamp2date(value):
     return datetime.datetime.fromtimestamp(value)
 
-# Define a class `DateModel` that inherits from `BaseModel`
-# This class represents a model with a validated date of birth field
+# Define a Pydantic model `DateModel`
+# This model uses `BeforeValidator` to convert a timestamp into a datetime object
 class DateModel(BaseModel):
-    # Use `Annotated` to specify that `dob` will be converted using `BeforeValidator`
     dob: Annotated[datetime.datetime, BeforeValidator(stamp2date)]
+
+# Create an instance of `DateModel` with a Unix timestamp
+user_dob = DateModel(dob=1700000000)  # Example timestamp
+
+# Print the converted datetime object
+print(user_dob)
