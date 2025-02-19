@@ -4,17 +4,16 @@
 # This keeps track of the total number of car instances created
 
 # Define the constructor method (__init__)
-# This method initializes the car's attributes
-
-# Assign the `brand` parameter to the instance variable `self.brand`
-
-# Increment the class attribute `total_cars` by 1 each time a new car is created
+# This method initializes the car's brand and updates the total car count
 
 # Define a class method `get_total_cars`
-# This method returns the total number of car instances created
+# This method returns the total number of cars created
 
-# Create an instance of the `Car` class with brand "Toyota"
+# Define a static method `is_valid_vin`
+# This method checks if a given VIN (Vehicle Identification Number) is valid
 
-# Create another instance of the `Car` class with brand "Honda"
+# Create instances of `Car`
 
-# Print the total number of cars using the class method
+# Call the class method to get the total number of cars
+
+# Call the static method to validate a VIN
