@@ -1,15 +1,13 @@
-# Define a class `Car`
-class Car:
+# Define a class `Validator`
+class Validator:
     
-    # Define a static method `is_valid_vin`
-    # This method checks if a given VIN (Vehicle Identification Number) is valid
+    # Define a static method `is_valid_email`
+    # This method checks if a given email is valid based on basic formatting rules
     @staticmethod
-    def is_valid_vin(vin):
-        # A valid VIN should have exactly 17 characters and be alphanumeric
-        return len(vin) == 17 and vin.isalnum()
+    def is_valid_email(email):
+        # A valid email must contain "@" and at least one "." after the "@" symbol
+        return "@" in email and "." in email.split("@")[1]
 
-# Check if a VIN is valid using the static method
-print(Car.is_valid_vin("1HGCM82633A123456"))  # Output: True
-
-# Check if a short VIN is valid
-print(Car.is_valid_vin("1234"))  # Output: False
+# Call the static method to validate email addresses
+print(Validator.is_valid_email("test@example.com"))  # Output: True
+print(Validator.is_valid_email("invalid-email"))  # Output: False
