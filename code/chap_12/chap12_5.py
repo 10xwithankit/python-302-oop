@@ -1,9 +1,13 @@
 # Import necessary modules from Pydantic and Python's standard library
 
 # Define a function `stamp2date`
-# This function converts a timestamp into a datetime object
+# This function converts a Unix timestamp into a datetime object
 
-# Define a class `DateModel` that inherits from `BaseModel`
-# This class represents a model with a validated date of birth field
+# Define a Pydantic model `DateModel`
+# This model uses `BeforeValidator` to convert a timestamp into a datetime object
 
-# Use `Annotated` to specify that `dob` will be converted using `BeforeValidator`
+# Create an instance of `DateModel` with a Unix timestamp
+
+# Print the converted datetime object
+
+
