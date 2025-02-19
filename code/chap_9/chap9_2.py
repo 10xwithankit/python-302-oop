@@ -12,16 +12,17 @@ class Payment(ABC):
         pass
 
 
+
 # Define a subclass `CreditCardPayment` that inherits from `Payment`
 
 # Implement the `process_payment` method
-# This method prints a message for processing a credit card payment
+# This method returns a message for processing a credit card payment
 
 # Define another subclass `PayPalPayment` that inherits from `Payment`
 
 # Implement the `process_payment` method
-# This method prints a message for processing a PayPal payment
+# This method returns a message for processing a PayPal payment
 
-# Create an instance of `CreditCardPayment`
+# Create instances of `CreditCardPayment` and `PayPalPayment`
 
-# Call the `process_payment` method for `CreditCardPayment`
+# Call the `process_payment` method for `CreditCardPayment` and `PayPalPayment`
