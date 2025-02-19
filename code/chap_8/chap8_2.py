@@ -1,10 +1,8 @@
-# Define a class `Car`
+# Define a class `Validator`
 
-# Define a static method `is_valid_vin`
-# This method checks if a given VIN (Vehicle Identification Number) is valid
+# Define a static method `is_valid_email`
+# This method checks if a given email is valid based on basic formatting rules
 
-# A valid VIN should have exactly 17 characters and be alphanumeric
+# A valid email must contain "@" and at least one "." after the "@" symbol
 
-# Check if a VIN is valid using the static method
-
-# Check if a short VIN is valid
+# Call the static method to validate email addresses
