@@ -15,22 +15,22 @@ class DataSource(ABC):
 class CSVSource(DataSource):
     
     # Implement the `read_data` method
-    # This method returns a message for reading data from a CSV file
+    # This method prints a message indicating data is being read from a CSV file
     def read_data(self):
-        return "Reading data from CSV file"
+        print("Reading data from CSV file")  # Output will now be printed
 
 # Define another subclass `SQLSource` that inherits from `DataSource`
 class SQLSource(DataSource):
     
     # Implement the `read_data` method
-    # This method returns a message for reading data from an SQL database
+    # This method prints a message indicating data is being read from an SQL database
     def read_data(self):
-        return "Reading data from SQL database"
+        print("Reading data from SQL database")  # Output will now be printed
 
 # Create instances of `CSVSource` and `SQLSource`
 csv = CSVSource()
 sql = SQLSource()
 
 # Call the `read_data` method for `CSVSource` and `SQLSource`
-output3 = csv.read_data()  # Should return a valid output
-output4 = sql.read_data()  # Should return a valid output
+csv.read_data()  # Output: Reading data from CSV file
+sql.read_data()  # Output: Reading data from SQL database
